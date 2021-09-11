@@ -1,0 +1,124 @@
+ body {
+    counter-reset: section;
+  }
+  .rtwcpig_red{
+    background: red;
+}
+  .rtwwcfml_appointment_main__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	box-shadow: 0 5px 30px 5px rgba(112, 119, 125, 0.6);
+	background-color: #f9f8f8;
+	height: 600px;
+}
+.rtwwcfml_appointment_main__wrapper{
+		height: auto;
+	}
+.rtwwcfml_appointment_tracker {
+	width: 225px;
+	background-color: #2a1a5e;
+}
+.rtwwcfml_multistep_content_wrapper > div {
+padding: 40px 25px 75px;
+}
+.rtwwcfml_multistep_content_wrapper .wpcf7-form-control-wrap {
+position: relative;
+width: 100%;
+display: inline-block;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+.rtwwcfml_appointment_tracker ul {
+    list-style-type: none;
+    margin: 0;
+	padding:15px 10px!important;
+}
+.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item {
+	list-style-type: none;
+	padding: 20px 8px;
+	display: block;
+    color: #91A0AE;
+    font-weight: 600;
+    position: relative;
+}
+.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item::before {
+	counter-increment: section;
+	content: counter(section);
+	width: 24px;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	background-color: #91A0AE;
+	color: #000000;
+	text-align: center;
+	border-radius: 50%;
+	margin-right: 12px;
+	font-size: 13px;
+	z-index: 1;
+	position: relative;
+	transition: 1s cubic-bezier(.67,-0.11,.45,1.41);
+}
+.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item.active::before{
+    background-color: #ef9434;
+	color: #ffffff;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	content: "\f00c";
+	transition: 1.2s cubic-bezier(.67,-0.11,.45,1.41);
+}
+.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item.active{
+    color: #ffffff;
+}
+
+.rtwwcfml_multistep_content_wrapper {
+	width: calc(100% - 225px);
+	position: relative;
+	 padding-left: 80;
+}
+.notifyjs-container {
+    top: 45px !important;
+	right: -468.656px !important;
+}
+
+@media(max-width:992px){
+	.notifyjs-wrapper, .notifyjs-bootstrap-base.notifyjs-bootstrap-rtwwcfml_text_notify {
+		width: 100% !important;
+	}
+}
+@media	screen and (max-width: 767px){
+	.rtwwcfml_appointment_tracker,.rtwwcfml_multistep_content_wrapper{
+		width: 100%;
+	}
+	.notifyjs-container{
+		right: 0 !important;
+	}
+	.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item span{
+		display: none;
+	}
+	.rtwwcfml_appointment_tracker ul{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding: 15px 0 !important;
+		overflow-x: auto;
+	}
+	.rtwwcfml_appointment_tracker ul .rtwwcfml_appointment_tracker_item::before{
+		margin-right: 0;
+	}
+
+}
+
+/* css for notify */
+  .notifyjs-bootstrap-base.notifyjs-bootstrap-rtwwcfml_text_notify {
+    width: 475px !important;
+  }
+ 
+
+  @media(max-width:576px){
+	.notifyjs-wrapper, .notifyjs-bootstrap-base.notifyjs-bootstrap-rtwwcfml_text_notify {
+		width: 100% !important;
+	}
+	.rtwwcfml_prcoess_stpes_btns {
+		min-height: 70px;
+	}
+  }

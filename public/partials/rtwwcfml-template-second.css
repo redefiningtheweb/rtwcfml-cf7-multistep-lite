@@ -1,0 +1,111 @@
+.rtwwcfml-progress-tracker ul {
+    margin: 0 0 20px 0!important;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    background-color: #f0f0f0;
+    border-radius: 40px;
+    overflow-x: auto;
+    padding: 0 !important;
+    justify-content: space-between;
+}
+
+.rtwwcfml-progress-tracker ul li {
+    list-style-type: none;
+    width: 50%;
+    position: relative;
+    padding: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.rtwwcfml-progress-tracker ul li::after {
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 1s cubic-bezier(1, .03, .22, .99) all;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.rtwwcfml-progress-tracker ul li.active::after {
+    transition: 1s cubic-bezier(1, .03, .22, .99) all;
+    right: 0;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+.rtwwcfml-progress-tracker ul li.active span {
+    color: var(--white-color);
+    z-index: 1;
+}
+
+.rtwwcfml-progress-tracker ul li span {
+    display: inline-block;
+    position: relative;
+}
+
+.rtwwcfml-progress-tracker ul li.active span::after {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    background-color: var(--secondary-color);
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    margin-left: 7px;
+    border-radius: 50%;
+    line-height: 19px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: scale(1) translateY(-50%);
+    transform: scale(1) translateY(-50%);
+}
+
+.rtwwcfml_prcoess_main_wrap {
+       box-shadow: 2px 4px 20px rgba(154, 160, 185, .05), 2px 4px 30px rgba(166, 173, 201, .22);
+       -webkit-box-shadow: 2px 4px 20px rgba(9, 16, 44, 0.53), 2px 4px 30px rgba(166, 173, 201, .22);
+       -ms-box-shadow: 2px 4px 20px rgba(154, 160, 185, .05), 2px 4px 30px rgba(166, 173, 201, .22);
+       -o-box-shadow: 2px 4px 20px rgba(154, 160, 185, .05), 2px 4px 30px rgba(166, 173, 201, .22);
+       padding: 25px;
+       position: relative;
+       border-radius: 4px;
+       background-color: var(--white-color);
+       overflow: hidden;
+   }
+   
+   .rtwwcfml_prcoess_main_wrap::before {
+       content: "";
+       background: linear-gradient(135deg, var(--secondary-color), 15%, #2a1a5e);
+       position: absolute;
+       height: 5px;
+       left: 0;
+       right: 0;
+       top: 0;
+   }
+   .rtwwcfml_wrap {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--gray-color);
+    line-height: 1.618;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.rtwwcfml_prev a:first-child{
+  margin-bottom: 10px;
+}
+
+  @media (max-width:576px){
+    .rtwwcfml-progress-tracker {
+        display: none;
+    }
+  }
